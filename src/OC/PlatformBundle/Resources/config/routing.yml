@@ -1,13 +1,9 @@
-hello_world:
-  path: /hello_world
-  defaults: { _controller: OCPlatformBundle:Advert:index }
+
 
 oc_platform_home:
     path:      /{page}
-    defaults:
-        _controller: OCPlatformBundle:Advert:index
-        page:        1
-        requirements:
+    defaults: { _controller: OCPlatformBundle:Advert:index, page: 1 }
+    requirements:
         page: \d*
 
 oc_platform_view:
@@ -16,7 +12,7 @@ oc_platform_view:
         _controller: OCPlatformBundle:Advert:view
     requirements:
         id: \d+
-        
+
 oc_platform_add:
     path:      /add
     defaults:
